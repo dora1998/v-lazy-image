@@ -44,6 +44,7 @@ var VLazyImageComponent = {
     src: function src(newSrc, oldSrc) {
       if ('IntersectionObserver' in window) {
         this.intersected = false;
+        this.loaded = false;
         this.observer.observe(this.$el);
       }
     }
